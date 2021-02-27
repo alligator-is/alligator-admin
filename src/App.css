@@ -1,38 +1,472 @@
-.App {
+body
+{
+  background-color: #ffffff;
+  color:black;
+  margin:0px;
+  padding: 0 1em 1em 1em;
+}
+
+html,body
+{
+  font-size: 22px;
+  font-family: 'Source Code Pro';
+}
+
+img
+{
+  max-width: 100%;
+}
+
+.App 
+{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header
+{
+  border-bottom:1px solid black;
+  display:flex;
+  justify-content: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header h1
+{
+  font-weight: 300;
+  margin-top:.3rem;
+  margin-bottom: 0em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.header .id
+{
+  background:black;
+  color:white;
+  font-size: small;
+  display:block;
+  flex:0 1 auto;
+  padding: .2em;
+  margin-bottom: .3rem;
+}
+
+.header .logo
+{
+  max-width: 380px;
+  flex:0 1 auto; 
+}
+
+.pipeline
+{
+  border-bottom: 1px solid black;
+  padding-bottom: 1em;
+}
+
+form .addbar
+{
+  display:flex;
+  font-size: smaller;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+form .addbar button
+{
+  margin-top:0px;
+  margin-bottom: 0px;
+}
+
+form .addbar label
+{
+  padding-right:.5em;
+  display: block;
+}
+
+form .addbar input
+{
+  margin-right:.5em;
+  display: inline-block;
+  padding:.3em;
+  border-radius:0px;
+}
+
+form .addbar .select-container.select-container .select__control
+{
+  padding:.2em;
+  border-radius:0px;
+  font-size: 1em;
+  min-height: auto;
+}
+
+.select__control .select__value-container > input
+{
+  border:0px;
+  margin:.25rem 0;
+}
+
+form .addbar .select__value-container,.select__control .select__value-container > input,
+form .addbar .select-container.select-container .select__control,
+form .select__indicator
+{
+  padding:0px .1em;
+}
+
+form .addbar .select-container
+{
+  min-height: 23px;
+  margin-right: .5em;
+}
+
+form .addbar .select-container .select__single-value,
+form .addbar .select__placeholder,form .addbar .select__indicator 
+{
+  color:white;
+}
+
+.groups .group .group__contentOuter,.identites .identity .identity__contentOuter
+{
+  transition: all 1ms !important;
+}
+
+.groups .group > span.is-open + div,.identites .identity > span.is-open + div
+{
+  overflow: visible !important;
+}
+
+.functions label,.pipeline label,.identities label,.groups label, .identities label
+{
+  margin:.4em 0;
+  display: block;
+}
+
+.functions input,.pipeline input,.identities input,.groups input,.addbar .select
+{
+  margin:.4em 0;
+}
+
+.Login
+{
+  padding:2em 1em 1em 1em;
+  max-width: 550px;
+  margin:0px auto;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border:1px solid black;
+  margin-top:2em;
+  -webkit-box-shadow: 0px 2px 8px 3px rgba(0,0,0,0.57); 
+  box-shadow: 0px 1px 3px 2px rgba(0,0,0,0.57);
+}
+
+code 
+{ 
+  background-color: black; 
+  color:white;   
+  word-break: break-all; 
+  white-space: break-spaces;
+  display: block;
+  padding:1em;
+}
+
+form .error
+{
+  width:100%;
+  margin-top:-.6em;
+  margin-bottom: .5em;
+  font-size: smaller;
+}
+
+.Login small
+{
+  width:100%;
+}
+
+.Login .form
+{
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.error
+{
+  color:red;
+  font-size: smaller;
+  word-break: break-all;
+  white-space: break-spaces;
+}
+
+label
+{
+  font-weight: bold;
+  margin-bottom: -.3em;
+}
+
+input,textarea, form .addbar .select-container .select__control
+{
+  background: black;
+  color:white;
+  padding:.5em;
+  width:100%;
+  font:inherit;
+  font-weight: bold;
+  outline-color: khaki;
+  margin: .8em 0;
+  box-sizing: border-box;
+  width: 100%;
+  border:0px;
+}
+
+form .addbar .select-container .select__control--is-focused
+{
+  border-color: khaki;
+  box-shadow: none;
+  border-width: 2px;
+  background: greenyellow;
+  color:black;
+}
+
+form .addbar .select__control--is-focused .select__placeholder,
+form .addbar .select__control--is-focused .select__indicator,
+form .addbar .select__control--is-focused .select__single-value
+{
+  color:black;
+}
+
+table
+{
+  width: 100%;
+}
+
+table td
+{
+  vertical-align: top;
+  padding:.5em;
+}
+
+table tr th
+{
+  background: black;
+  color:white;
+}
+
+table tr th,.rc-table-tbody tr td
+{
+  text-align: left;
+  padding:.2em;
+  border:0px;
+}
+
+table tbody tr:nth-child(even){ background:lightgray; }
+
+table tbody tr:nth-child(odd){ background:white; }
+
+table tbody tr:hover
+{
+  background: greenyellow;
+  cursor: pointer;
+}
+
+table tr th:last-child,table tr td:last-child
+{
+  text-align: right;
+}
+
+button,.button
+{
+  background: black;
+  color:white;
+  font:inherit;
+  font-size: 1em;
+  padding:.3em 2em;
+  font-weight: bold;
+  margin: .8em 0; 
+  border:0px;
+  cursor:pointer;
+  outline-color: khaki;
+  border-radius: 0px;
+}
+
+.Login > h1
+{
+  font-weight: 300;
+  font-size: 2.6em;
+  margin-top: 1rem;
+}
+
+.functions,.groups,.addbar .select-container,.identities
+{
+  width:100%;
+}
+
+.func
+{
+  width:100%;
+}
+
+button:disabled, button:disabled:hover, button:disabled:hover span{
+  background:grey;
+  color:lightgrey;
+}
+.formbuttons
+{
+  display:flex;
+}
+
+.formbuttons button
+{
+  margin-right: 1em;
+}
+
+.func > span button,.group > span button,
+.identity > span button
+{
+  margin:0 0  0  .5em;
+  padding:0em;
+  background: transparent;
+}
+
+.func > span:hover button,.group > span:hover button,
+.identity > span:hover button
+{
+  color:black;
+}
+
+.func__contentOuter,.group__contentOuter,.identity__contentOuter
+{
+  box-sizing: border-box;
+  border:1px solid black;
+  width: 100%;
+}
+
+.result
+{
+  max-height: 400px;
+  overflow: auto;
+}
+
+.func__contentInner,.group__contentInner
+,.identity__contentInner
+{
+  box-sizing: border-box;  
+  padding:1em;
+  width: 100%;
+}
+
+
+.func > span,.group >span,.identity >span
+{
+  background:black;
+  color:white;
+  width: 100%;
+  display:block;
+  padding:.5em;
+  border-top: 1px solid white;
+  box-sizing: border-box;
+}
+
+.func > span:hover,.button:hover, button:hover,
+.func > span:hover button,input:focus,
+.group > span:hover,.button:hover,.group > span:hover,
+.identity > span:hover,.button:hover,.identity > span:hover
+{
+  background:greenyellow;
+  color:black;
+
+}
+.func__trigger,.group__trigger,.identity__trigger 
+{
+  cursor: pointer;
+}
+
+table button
+{
+  margin:0px;
+  margin-left:.5em; 
+  padding:0px;
+  background:none;
+  color:black;
+  outline:0;
+
+}
+
+table button>:hover
+{
+  background:none;
+  color:white;
+}
+
+.Modal button.close
+{
+  background:white;
+  margin:0px;
+}
+
+.Modal button.close
+{
+  color:black;
+}
+
+.ReactModal__Body--open,
+.ReactModal__Html--open
+{
+  overflow: hidden;
+}
+
+body .sidenav
+{
+  height: 100%;
+  position: sticky;
+}
+
+body .sidenav---sidenav-nav---3tvij > .sidenav---sidenav-navitem---uwIJ- > .sidenav---navitem---9uL5T .sidenav---navicon---3gCRo:not(:hover),
+body .sidenav---sidenav-nav---3tvij > .sidenav---sidenav-navitem---uwIJ- > .sidenav---navitem---9uL5T .sidenav---navtext---1AE_f:not(:hover) {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+body .sidenav---sidenav-nav---3tvij > .sidenav---sidenav-navitem---uwIJ- > .sidenav---navitem---9uL5T .sidenav---navicon---3gCRo > *:not(:hover),
+body .sidenav---sidenav-nav---3tvij > .sidenav---sidenav-navitem---uwIJ- > .sidenav---navitem---9uL5T .sidenav---navtext---1AE_f > *:not(:hover) 
+{
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+body .sidenav---sidenav-subnav---1EN61
+{
+  background-color: black;
+}
+
+body .sidenav---sidenav---_2tBP
+{
+  position: fixed;
+}
+
+body .sidenav---sidenav---_2tBP.sidenav---expanded---1KdUL .sidenav---sidenav-subnav---1EN61 > .sidenav---sidenav-subnavitem---1cD47:hover::before 
+{
+  background: green;
+}
+
+body .sidenav---sidenav-subnav---1EN61 > .sidenav---sidenav-subnavitem---1cD47:first-child,
+body .sidenav---sidenav-subnav---1EN61 > .sidenav---sidenav-subnavitem---1cD47 > .sidenav---navitem---9uL5T:not(:hover),
+body .sidenav---sidenav---_2tBP.sidenav---expanded---1KdUL .sidenav---sidenav-subnav---1EN61 > .sidenav---sidenav-subnavitem---1cD47 > .sidenav---navitem---9uL5T
+{
+  color:white;
+}
+
+body .sidenav---sidenav-subnav---1EN61 > .sidenav---sidenav-subnavitem---1cD47.sidenav---selected---1EK3y > .sidenav---navitem---9uL5T{
+ color:black; 
+}
+
+body .sidenav---sidenav-subnav---1EN61 > .sidenav---sidenav-subnavitem---1cD47.sidenav---selected---1EK3y > .sidenav---navitem---9uL5T:not(:hover) 
+{
+ color:white; 
+ background:rgba(211, 211, 211,.3); 
+}
+
+body .sidenav---sidenav-subnav---1EN61 > .sidenav---sidenav-subnavitem---1cD47 > .sidenav---navitem---9uL5T:hover
+{
+  background-color: white;
+  opacity: .9;
+}
+@media (max-width:1000px){
+  .header
+  {
+    flex-wrap: wrap;
   }
 }
