@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/alligator-admin/static/css/main.07ca3688.chunk.css",
+    "main.js": "/alligator-admin/static/js/main.a8d9f5ed.chunk.js",
+    "main.js.map": "/alligator-admin/static/js/main.a8d9f5ed.chunk.js.map",
+    "runtime-main.js": "/alligator-admin/static/js/runtime-main.1060e9c8.js",
+    "runtime-main.js.map": "/alligator-admin/static/js/runtime-main.1060e9c8.js.map",
+    "static/css/2.43c665f8.chunk.css": "/alligator-admin/static/css/2.43c665f8.chunk.css",
+    "static/js/2.8dd2ee88.chunk.js": "/alligator-admin/static/js/2.8dd2ee88.chunk.js",
+    "static/js/2.8dd2ee88.chunk.js.map": "/alligator-admin/static/js/2.8dd2ee88.chunk.js.map",
+    "index.html": "/alligator-admin/index.html",
+    "static/css/2.43c665f8.chunk.css.map": "/alligator-admin/static/css/2.43c665f8.chunk.css.map",
+    "static/css/main.07ca3688.chunk.css.map": "/alligator-admin/static/css/main.07ca3688.chunk.css.map",
+    "static/js/2.8dd2ee88.chunk.js.LICENSE.txt": "/alligator-admin/static/js/2.8dd2ee88.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/alligator-admin/static/media/source-code-pro-latin-900italic.cf2b0b73.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1060e9c8.js",
+    "static/css/2.43c665f8.chunk.css",
+    "static/js/2.8dd2ee88.chunk.js",
+    "static/css/main.07ca3688.chunk.css",
+    "static/js/main.a8d9f5ed.chunk.js"
+  ]
+}
