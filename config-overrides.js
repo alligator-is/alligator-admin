@@ -1,5 +1,6 @@
 let path = require("path")
 var webpack = require('webpack');
+const CnameWebpackPlugin = require('cname-webpack-plugin');
 module.exports={
     webpack: function(config, env) {
      
@@ -9,7 +10,9 @@ module.exports={
 
         config.resolve.alias["icebreaker-network$"]=path.resolve(__dirname, 'node_modules/icebreaker-network/browser.js')
         config.resolve.alias[" chloride$"]=path.resolve(__dirname, 'node_modules/chloride/browser.js')
-
+        config.plugins.push(new CnameWebpackPlugin({
+          domain: 'alligator.is',
+        }))
         
      
         // ...add your webpack config
