@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "private": false,
   "author": "Markus Wunderlin",
-  "homepage": "http://alligator-io.github.io/alligator-admin",
+  "homepage": "http://alligator.is",
   "license": "MIT",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
