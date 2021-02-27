@@ -1,6 +1,7 @@
-var express = require('express');
-var app = express();
+var process = require("process")
+var express = require('express')
+var app = express()
 
-app.use(express.static('build'));
+app.use(express.static('build'))
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
