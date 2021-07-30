@@ -31,14 +31,15 @@ function Groups({ connection, expanded }) {
 
       <Formik
         initialValues={{ name: '', allow: '' }}
+        enableReinitialize={true}
         validate={values => {
-
+          console.log(values);
           let errors = {};
           if (!values) return errors;
           if (!values.name) {
             errors.name = 'Required';
           }
-          errors.name = 'Required';
+          
           return errors;
         }}
         onSubmit={(values, { setSubmitting, setErrors, isValid }) => {
@@ -322,6 +323,7 @@ function Groups({ connection, expanded }) {
             return errors;
           }}
           onSubmit={(values, { setSubmitting, setErrors, isValid }) => {
+            console.log("submit");
             api.groups.put({ id: values.id, name: values.name, allow: values.allow }, function (err, data) {
               if (err) {
                 setErrors({ allow: err.message })
